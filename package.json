@@ -1,17 +1,17 @@
 {
- "name": "@typeup/generator-html",
+ "name": "@typeup/document-renderer",
  "version": "0.1.0",
- "description": "HTML output generator for TypeUp.",
+ "description": "Document renderer for TypeUp.",
  "repository": {
   "type": "git",
-  "url": "git+https://github.com/typeup/generator-html.git"
+  "url": "git+https://github.com/typeup/document-renderer.git"
  },
  "author": "Simon Mika <simon@mika.se>",
  "license": "MIT",
  "bugs": {
-  "url": "https://github.com/typeup/generator-html/issues"
+  "url": "https://github.com/typeup/document-renderer/issues"
  },
- "homepage": "https://github.com/typeup/generator-html#readme",
+ "homepage": "https://github.com/typeup/document-renderer#readme",
  "main": "build/index.js",
  "typings": "build/index.d.ts",
  "jest": {
@@ -47,7 +47,9 @@
   "clean": "rm -rf build node_modules coverage"
  },
  "dependencies": {
-  "@cogneco/mend": "^1.7.3"
+  "@cogneco/mend": "^1.7.3",
+  "@typeup/dom": "^0.1.15",
+  "mathjax-node": "^2.1.1"
  },
  "devDependencies": {
   "@types/jest": "^23.1.3",

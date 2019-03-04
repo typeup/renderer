@@ -1,2 +1,2 @@
-# generator-html
-HTML output generator for TypeUp.
+# Document Renderer
+Document renderor for TypeUp.
