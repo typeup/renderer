@@ -7,3 +7,5 @@ export function render(document: dom.Document) {
 
 import "./document"
 import "./file"
+import "./block"
+import "./inline"
