@@ -24,6 +24,7 @@
 		]
 	},
 	"files": [
+		"../@types/mathjax-node.d.ts",
 		"index.ts"
 	],
 	"typeAcquisition": {

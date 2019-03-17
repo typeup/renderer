@@ -1,23 +1,13 @@
 {
+	"extends": "./tsconfig.test.json",
 	"compilerOptions": {
-		"target": "es6",
-		"module": "commonjs",
-		"noImplicitAny": true,
-		"removeComments": true,
-		"preserveConstEnums": true,
-		"forceConsistentCasingInFileNames": true,
-		"noImplicitThis": true,
-		"strictNullChecks": true,
 		"sourceMap": true,
+		"sourceRoot": "../source",
 		"outDir": "../build/",
-		"moduleResolution": "node",
-		"resolveJsonModule": true
+		"declaration": true
 	},
 	"files": [
 		"../@types/mathjax-node.d.ts",
 		"index.ts"
-	],
-	"typeAcquisition": {
-		"enable": true
-	}
+	]
 }
