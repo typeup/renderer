@@ -1,2 +1,2 @@
-# Document Renderer
-Document renderor for TypeUp.
+# Renderer
+Renderer for TypeUp.

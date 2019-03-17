@@ -9,7 +9,7 @@ async function render(renderer: Renderer, me: dom.block.Math): Promise<string> {
 	})
 	MathJaxNode.start()
 	const result = await new Promise<string>((resolve, reject) => MathJaxNode.typeset({
-		math: this.math,
+		math: me.value,
 		format: "inline-TeX",
 		mml: true,
 	}, data => {
