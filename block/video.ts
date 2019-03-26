@@ -6,7 +6,7 @@ async function render(renderer: Renderer, me: dom.block.Video): Promise<string> 
 	<video controls class='${ me.classes.join(" ")}'>
 		<source src='${ me.source }' type='${ me.type }'>
 	</video>
-	<figcaption>${ renderer.render(me.content) }</figcaption>
+	<figcaption>${ await renderer.render(me.content) }</figcaption>
 </figure>
 `
 }

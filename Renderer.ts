@@ -14,7 +14,7 @@ export class Renderer {
 	async render(node: dom.Node | dom.Node[]): Promise<string> {
 		let result: string
 		if (Array.isArray(node))
-			result = node.map(n => this.render(n)).reduce<string[]>((r, e) => Array.isArray(e) ? [...r, ...e] : [...r, e], []).join()
+			result = (await Promise.all(node.map(n => this.render(n)))).reduce<string[]>((r, e) => Array.isArray(e) ? [...r, ...e] : [...r, e], []).join("")
 		else {
 			const render = renderers[node.class]
 			result = render ? await render(this, node) : ""

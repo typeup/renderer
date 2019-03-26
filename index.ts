@@ -1,6 +1,6 @@
 import * as dom from "@typeup/dom"
 import { Renderer } from "./Renderer"
-export function render(document: dom.Document) {
+export function render(document: dom.Document): Promise<string> {
 	const renderer = new Renderer()
 	return renderer.render(document)
 }

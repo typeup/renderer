@@ -20,7 +20,7 @@ async function render(renderer: Renderer, me: dom.block.Math): Promise<string> {
 	}))
 	return `<figure>
 	${result}
-	<figcaption>${ renderer.render(me.content) }</figcaption>
+	<figcaption>${ await renderer.render(me.content) }</figcaption>
 </figure>
 `
 }
