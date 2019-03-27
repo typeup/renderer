@@ -2,8 +2,7 @@ import * as dom from "@typeup/dom"
 export type renderFunction = (renderer: Renderer, node: dom.Node) => Promise<string>
 
 export class Renderer {
-	constructor(
-		private variables: { [name: string]: string } = {}) {
+	private constructor(private variables: { [name: string]: string } = {}) {
 	}
 	getVariable(name: string): string {
 		return this.variables[name]
@@ -20,6 +19,12 @@ export class Renderer {
 			result = render ? await render(this, node) : ""
 		}
 		return result
+	}
+	scope(): Renderer {
+		return new Renderer({ ...this.variables })
+	}
+	static create(): Renderer {
+		return new Renderer({})
 	}
 }
 const renderers: { [className: string]: renderFunction } = {}
