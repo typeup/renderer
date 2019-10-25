@@ -1,6 +1,7 @@
 import "./assignment"
 import "./chapter"
 import "./code"
+import "./diagram"
 import "./figure"
 import "./heading"
 import "./import"
