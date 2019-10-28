@@ -48,7 +48,7 @@
  },
  "dependencies": {
   "@cogneco/mend": "^1.7.6",
-  "@typeup/dom": "^0.2.7",
+  "@typeup/dom": "^0.2.8",
   "mathjax-node": "^2.1.1",
   "mermaid": "^8.4.0"
  },
