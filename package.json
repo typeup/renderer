@@ -1,6 +1,6 @@
 {
  "name": "@typeup/renderer",
- "version": "0.2.9",
+ "version": "0.2.10",
  "description": "Renderer for TypeUp.",
  "repository": {
   "type": "git",
