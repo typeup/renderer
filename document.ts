@@ -15,6 +15,7 @@ async function render(renderer: Renderer, document: dom.Document): Promise<strin
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css" />
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
 		<script>hljs.initHighlightingOnLoad();</script>
+		<link rel="stylesheet" type="text/css" href="${ renderer.getVariable("template") + "/" + renderer.getVariable("class") + ".css" }" />
 	</head>
 	<body>
 		<header><h1>${ renderer.getVariable("title") }</h1></header>
