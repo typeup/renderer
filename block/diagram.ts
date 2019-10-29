@@ -4,7 +4,7 @@ import { Renderer, addRenderer } from "../Renderer"
 
 async function render(renderer: Renderer, me: dom.block.Diagram): Promise<string> {
 	let value = me.value.trim()
-	if (value.startsWith("//"))
+	if (value.startsWith("// {type:"))
 		value = await yuml2svg(value)
 	return `<figure>
 		${ value }
