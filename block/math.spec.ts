@@ -1,6 +1,6 @@
 import * as dom from "@typeup/dom"
 import { Renderer } from "../Renderer"
-import "./math"
+import "../index"
 
 const renderer = Renderer.create()
 describe("Block.Math", () => {
@@ -24,7 +24,7 @@ describe("Block.Math", () => {
     <mn>2</mn>
   </msup>
 </math>
-\t<figcaption></figcaption>
+\t<figcaption>Pythagoras Theorem.</figcaption>
 </figure>
 `)
 	})
