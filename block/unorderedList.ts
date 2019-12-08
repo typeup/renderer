@@ -6,4 +6,4 @@ async function render(renderer: Renderer, me: dom.block.UnorderedList): Promise<
 	${ (await Promise.all(me.content.map(async item => renderer.render(item)))).join("") }
 </ul>`
 }
-addRenderer("Block.UnordereddList", render)
+addRenderer("Block.UnorderedList", render)
