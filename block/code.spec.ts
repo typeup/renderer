@@ -9,7 +9,7 @@ describe("Block.Code", () => {
 		expect(await renderer.render(node)).toEqual(
 `<figure>
 	<pre><code class="c">
-	void main() {
+void main() {
 	printf("Hello World!")
 }
 	</code></pre>
