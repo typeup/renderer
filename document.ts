@@ -4,7 +4,7 @@ async function render(renderer: Renderer, document: dom.Document): Promise<strin
 	const content = await renderer.render(document.content)
 	return (
 `<!doctype html>
-<html lang="${ renderer.getVariable("language") }>
+<html lang="${ renderer.getVariable("language") || "en" }">
 	<head>
 		<meta charset="UTF-8" />
 		<title>${ renderer.getVariable("title") || ""  }</title>
