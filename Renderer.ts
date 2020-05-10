@@ -1,4 +1,12 @@
 import * as dom from "@typeup/dom"
+import * as MathJaxNode from "mathjax-node"
+
+MathJaxNode.config({
+	MathJax: {
+	},
+})
+MathJaxNode.start()
+
 export type renderFunction = (renderer: Renderer, node: dom.Node) => Promise<string>
 
 export class Renderer {

@@ -3,11 +3,6 @@ import { Renderer, addRenderer } from "../Renderer"
 import * as MathJaxNode from "mathjax-node"
 
 async function render(renderer: Renderer, me: dom.inline.Math): Promise<string> {
-	MathJaxNode.config({
-		MathJax: {
-		},
-	})
-	MathJaxNode.start()
 	const result = await new Promise<string>((resolve, reject) => MathJaxNode.typeset({
 		math: me.value,
 		format: "inline-TeX",
