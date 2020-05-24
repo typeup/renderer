@@ -2,6 +2,8 @@ import * as dom from "@typeup/dom"
 import { Renderer } from "../Renderer"
 import "./code"
 
+jest.useFakeTimers()
+
 const renderer = Renderer.create()
 describe("Inline.Code", () => {
 	it("render", async () => {

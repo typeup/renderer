@@ -2,6 +2,8 @@ import * as dom from "@typeup/dom"
 import { Renderer } from "../Renderer"
 import "../index"
 
+jest.useFakeTimers()
+
 const renderer = Renderer.create()
 describe("Block.DefinitionList", () => {
 	it("render", async () => {

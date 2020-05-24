@@ -1,20 +1,11 @@
 import * as dom from "@typeup/dom"
 import { Renderer, addRenderer } from "../Renderer"
-import * as MathJaxNode from "mathjax-node"
+import * as math from "../math"
 
 async function render(renderer: Renderer, me: dom.block.Math): Promise<string> {
-	const result = await new Promise<string>((resolve, reject) => MathJaxNode.typeset({
-		math: me.value,
-		format: "inline-TeX",
-		mml: true,
-	}, data => {
-		if (data.errors)
-			reject(data.errors)
-		else
-			resolve(data.mml)
-	}))
+	// return math.typeset("inline-TeX", "a^2 + b^2 = c^2" ?? me.value)
 	return `<figure>
-	${result}
+	${ await math.typeset("inline-TeX", me.value) }
 	<figcaption>${ await renderer.render(me.content) }</figcaption>
 </figure>
 `
