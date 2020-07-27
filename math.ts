@@ -5,7 +5,7 @@ export async function typeset(format: "inline-TeX" | "TeX", math: string): Promi
 	if (!initialized) {
 		MathJaxNode.config({
 			MathJax: {
-				format: "mml"
+				format: "tex"
 			},
 		})
 		MathJaxNode.start()
@@ -14,7 +14,7 @@ export async function typeset(format: "inline-TeX" | "TeX", math: string): Promi
 	const result = await MathJaxNode.typeset({
 		format,
 		math,
-		mml: true,
+		html: true,
 	})
-	return result.errors ? "error" :  result.mml || "empty formula"
+	return result.errors ? "error" :  result.html ?? "empty formula"
 }
