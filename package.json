@@ -49,7 +49,7 @@
  "dependencies": {
   "@cogneco/mend": "^1.7.15",
   "@typeup/dom": "^0.2.12",
-  "mathjax-node": "^2.1.1",
+  "mathjax-full": "^3.0.5",
   "yuml2svg": "^4.2.2"
  },
  "devDependencies": {

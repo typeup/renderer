@@ -1,11 +1,5 @@
 import * as dom from "@typeup/dom"
-import * as MathJaxNode from "mathjax-node"
-
-MathJaxNode.config({
-	MathJax: {
-	},
-})
-MathJaxNode.start()
+import * as math from "./math"
 
 export type renderFunction = (renderer: Renderer, node: dom.Node) => Promise<string>
 
@@ -25,6 +19,8 @@ export class Renderer {
 		else {
 			const render = renderers[node.class]
 			result = render ? await render(this, node) : ""
+			if (node.class == "Document")
+				result = await math.typeset(result)
 		}
 		return result
 	}

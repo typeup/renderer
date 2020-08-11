@@ -7,7 +7,7 @@
 		"declaration": true
 	},
 	"files": [
-		"@types/mathjax-node.d.ts",
+		"@types/mathjax-full.d.ts",
 		"index.ts"
 	]
 }
