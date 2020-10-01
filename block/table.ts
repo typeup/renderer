@@ -22,7 +22,7 @@ function getClasses(me: dom.block.Table): string {
 async function render(renderer: Renderer, me: dom.block.Table): Promise<string> {
 	return `<table class="${ getClasses(me) }">
 	${ (await Promise.all(me.rows.map(async row => renderer.render(row)))).join("") }
-	<caption>${ await renderer.render(me.content) }</caption>\n</table>\n
+	<caption>${ await renderer.render(me.content) }</caption>
 </table>`
 }
 addRenderer("Block.Table", render)

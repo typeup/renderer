@@ -29,14 +29,6 @@ describe("Block.DefinitionList", () => {
 				]),
 			]),
 		])
-		expect(await renderer.render(node)).toEqual(
-`<dl>
-	<dt>Alpha</dt>
-	<dd>Term A</dd>
-	<dd>First Term</dd>
-	<dt>Beta</dt>
-	<dd>Term B</dd>
-	<dd>Second Term</dd>
-</dl>`)
+		expect(await renderer.render(node)).toMatchSnapshot()
 	})
 })

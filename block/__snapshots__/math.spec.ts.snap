@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Block.Math render 1`] = `"<figure>$$a^2 + b^2 = c^2$$<figcaption>Pythagoras Theorem.</figcaption></figure>"`;
+
+exports[`Block.Math render two 1`] = `"<figure>$$a^2 + b^2 = c^2$$<figcaption>Pythagoras Theorem.</figcaption></figure><figure>$$a^2 + b^2 = c^2$$<figcaption>Pythagoras Theorem.</figcaption></figure>"`;

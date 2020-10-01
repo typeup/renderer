@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Block.Code render 1`] = `
+"<figure>
+	<pre><code class=\\"c\\">
+void main() {
+	printf(\\"Hello World!\\")
+}
+	</code></pre>
+	<figcaption>Hello World in C.</figcaption>
+</figure>
+"
+`;

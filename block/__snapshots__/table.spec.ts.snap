@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Block.Table render 1`] = `
+"<table class=\\"\\">
+	<tr>
+	<th>
+	Header A
+</th><th>
+	Header B
+</th>
+</tr><tr>
+	<td>
+	value A
+</td><td>
+	value B
+</td>
+</tr>
+	<caption>Table caption.</caption>
+</table>"
+`;

@@ -7,6 +7,6 @@ jest.useFakeTimers()
 const renderer = Renderer.create()
 describe("Inline.Code", () => {
 	it("render", async () => {
-		expect(await renderer.render(new dom.inline.Code("const pi = 3.1415"))).toEqual("<code>const pi = 3.1415</code>")
+		expect(await renderer.render(new dom.inline.Code("const pi = 3.1415"))).toMatchSnapshot()
 	})
 })

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Block.DefinitionList render 1`] = `
+"<dl>
+	<dt>Alpha</dt>
+	<dd>Term A</dd>
+	<dd>First Term</dd>
+	<dt>Beta</dt>
+	<dd>Term B</dd>
+	<dd>Second Term</dd>
+</dl>"
+`;
