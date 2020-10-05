@@ -9,4 +9,7 @@ describe("Inline.Code", () => {
 	it("render", async () => {
 		expect(await renderer.render(new dom.inline.Code("const pi = 3.1415"))).toMatchSnapshot()
 	})
+	it("html", async () => {
+		expect(await renderer.render(new dom.inline.Code("<html></html>"))).toMatchSnapshot()
+	})
 })

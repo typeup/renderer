@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Inline.Code html 1`] = `"<code>&lt;html&gt;&lt;/html&gt;</code>"`;
+
 exports[`Inline.Code render 1`] = `"<code>const pi = 3.1415</code>"`;

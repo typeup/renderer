@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Block.Code html 1`] = `
+"<figure>
+	<pre><code class=\\"html\\">
+&lt;html&gt;
+	&lt;head&gt;
+	&lt;title&gt;Title&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+	</code></pre>
+	<figcaption>Some HTML.</figcaption>
+</figure>
+"
+`;
+
 exports[`Block.Code render 1`] = `
 "<figure>
 	<pre><code class=\\"c\\">
