@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Inline.Link render 1`] = `"<a href='http://example.com'>link</a>"`;
