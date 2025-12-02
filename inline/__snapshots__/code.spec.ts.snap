@@ -3,7 +3,3 @@
 exports[`renderer.Inline.Code > html 1`] = `"<code>&lt;html&gt;&lt;/html&gt;</code>"`;
 
 exports[`renderer.Inline.Code > render 1`] = `"<code>const pi = 3.1415</code>"`;
-
-exports[`renderer.Inline.Code html 1`] = `"<code>&lt;html&gt;&lt;/html&gt;</code>"`;
-
-exports[`renderer.Inline.Code render 1`] = `"<code>const pi = 3.1415</code>"`;
