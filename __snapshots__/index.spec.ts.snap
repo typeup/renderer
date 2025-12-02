@@ -1,0 +1,583 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renderer > render(() => new __vite_ssr_import_2__.dom.Document([
+      new __vite_ssr_import_2__.dom.Block.Heading(1, [new __vite_ssr_import_2__.dom.Inline.Text("Main Title")]),
+      new __vite_ssr_import_2__.dom.Block.Paragraph([new __vite_ssr_import_2__.dom.Inline.Text("Content under title")])
+    ])) 1`] = `
+"<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+		<meta name="author" content="" />
+		<meta name="date" content="12/02/2025" />
+		<meta name='identification' content=""/>
+		<meta name='classification' content=""/>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css" />
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+		<link rel="stylesheet" type="text/css" href="undefined/article.css" />
+		<script>
+function tocGetText(e) {
+	"use strict";
+	var text = "", x;
+	for (x = e.firstChild; x !== null; x = x.nextSibling)
+		text += x.nodeType === x.TEXT_NODE ? x.data : x.nodeType === x.ELEMENT_NODE ? tocGetText(x) : "";
+	return text;
+}
+
+function tocMake() {
+	"use strict";
+	var menu = document.createElement("ol");
+	var children = document.body.childNodes;
+	var chapter;
+	var chapterId;
+	var submenu;
+	for (var i = 0; i < children.length; i++) {
+		if (children[i].nodeType == 1) {
+			switch(children[i].nodeName)
+			{
+			case "H1":
+				var content = tocGetText(children[i]);
+				chapterId = encodeURIComponent(content.toLowerCase()).replace(/%20/g,'.');
+				children[i].setAttribute("id", chapterId);
+				var link = document.createElement("a");
+				link.setAttribute("href", "#" + chapterId);
+				var language = children[i].getAttribute("lang")
+				if (language !== null && language !== undefined)
+					link.setAttribute("lang", language);
+				link.innerHTML = children[i].innerHTML;
+				chapter = document.createElement("li");
+				chapter.appendChild(link);
+				menu.appendChild(chapter);
+				submenu = null;
+				break;
+			case "H2":
+				var content = tocGetText(children[i]);
+				var id = chapterId + "_" + encodeURIComponent(content.toLowerCase()).replace(/%20/g,'.');
+				children[i].setAttribute("id", id);
+				var link = document.createElement("a");
+				link.setAttribute("href", "#" + id);
+				var language = children[i].getAttribute("lang")
+				if (language !== null && language !== undefined)
+					link.setAttribute("lang", language);
+				link.innerHTML = children[i].innerHTML;
+				var section = document.createElement("li");
+				section.appendChild(link);
+				if (submenu === null) {
+				  submenu = document.createElement("ol");
+				  chapter.appendChild(submenu);
+				}
+				submenu.appendChild(section);
+				break;
+			}
+		}
+	}
+	var nav = document.createElement("nav");
+	var title = document.createElement("h1");
+	title.appendChild(document.createTextNode(""));
+	nav.appendChild(title);
+	nav.appendChild(menu);
+	var header = document.getElementsByTagName("header")[0];
+	if (document.getElementById("abstract") != null) {
+		header.parentNode.insertBefore(nav, document.getElementById("abstract").nextSibling);
+	} else {
+		header.parentNode.insertBefore(nav, header.nextSibling);
+	}
+}
+window.onload = tocMake;
+</script>
+	</head>
+	<body>
+		<header><h1></h1></header>
+		<h1>Main Title</h1><p>
+	Content under title
+</p>
+	</body>
+</html>
+"
+`;
+
+exports[`renderer > render(() => new __vite_ssr_import_2__.dom.Document([
+      new __vite_ssr_import_2__.dom.Block.Paragraph([
+        new __vite_ssr_import_2__.dom.Inline.Text("This is "),
+        new __vite_ssr_import_2__.dom.Inline.Emphasize([new __vite_ssr_import_2__.dom.Inline.Text("emphasized")]),
+        new __vite_ssr_import_2__.dom.Inline.Text(" text.")
+      ])
+    ])) 1`] = `
+"<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+		<meta name="author" content="" />
+		<meta name="date" content="12/02/2025" />
+		<meta name='identification' content=""/>
+		<meta name='classification' content=""/>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css" />
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+		<link rel="stylesheet" type="text/css" href="undefined/article.css" />
+		<script>
+function tocGetText(e) {
+	"use strict";
+	var text = "", x;
+	for (x = e.firstChild; x !== null; x = x.nextSibling)
+		text += x.nodeType === x.TEXT_NODE ? x.data : x.nodeType === x.ELEMENT_NODE ? tocGetText(x) : "";
+	return text;
+}
+
+function tocMake() {
+	"use strict";
+	var menu = document.createElement("ol");
+	var children = document.body.childNodes;
+	var chapter;
+	var chapterId;
+	var submenu;
+	for (var i = 0; i < children.length; i++) {
+		if (children[i].nodeType == 1) {
+			switch(children[i].nodeName)
+			{
+			case "H1":
+				var content = tocGetText(children[i]);
+				chapterId = encodeURIComponent(content.toLowerCase()).replace(/%20/g,'.');
+				children[i].setAttribute("id", chapterId);
+				var link = document.createElement("a");
+				link.setAttribute("href", "#" + chapterId);
+				var language = children[i].getAttribute("lang")
+				if (language !== null && language !== undefined)
+					link.setAttribute("lang", language);
+				link.innerHTML = children[i].innerHTML;
+				chapter = document.createElement("li");
+				chapter.appendChild(link);
+				menu.appendChild(chapter);
+				submenu = null;
+				break;
+			case "H2":
+				var content = tocGetText(children[i]);
+				var id = chapterId + "_" + encodeURIComponent(content.toLowerCase()).replace(/%20/g,'.');
+				children[i].setAttribute("id", id);
+				var link = document.createElement("a");
+				link.setAttribute("href", "#" + id);
+				var language = children[i].getAttribute("lang")
+				if (language !== null && language !== undefined)
+					link.setAttribute("lang", language);
+				link.innerHTML = children[i].innerHTML;
+				var section = document.createElement("li");
+				section.appendChild(link);
+				if (submenu === null) {
+				  submenu = document.createElement("ol");
+				  chapter.appendChild(submenu);
+				}
+				submenu.appendChild(section);
+				break;
+			}
+		}
+	}
+	var nav = document.createElement("nav");
+	var title = document.createElement("h1");
+	title.appendChild(document.createTextNode(""));
+	nav.appendChild(title);
+	nav.appendChild(menu);
+	var header = document.getElementsByTagName("header")[0];
+	if (document.getElementById("abstract") != null) {
+		header.parentNode.insertBefore(nav, document.getElementById("abstract").nextSibling);
+	} else {
+		header.parentNode.insertBefore(nav, header.nextSibling);
+	}
+}
+window.onload = tocMake;
+</script>
+	</head>
+	<body>
+		<header><h1></h1></header>
+		<p>
+	This is <em>emphasized</em> text.
+</p>
+	</body>
+</html>
+"
+`;
+
+exports[`renderer > render(() => new __vite_ssr_import_2__.dom.Document([
+      new __vite_ssr_import_2__.dom.Block.Paragraph([new __vite_ssr_import_2__.dom.Inline.Text("First paragraph")]),
+      new __vite_ssr_import_2__.dom.Block.Paragraph([new __vite_ssr_import_2__.dom.Inline.Text("Second paragraph")])
+    ])) 1`] = `
+"<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+		<meta name="author" content="" />
+		<meta name="date" content="12/02/2025" />
+		<meta name='identification' content=""/>
+		<meta name='classification' content=""/>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css" />
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+		<link rel="stylesheet" type="text/css" href="undefined/article.css" />
+		<script>
+function tocGetText(e) {
+	"use strict";
+	var text = "", x;
+	for (x = e.firstChild; x !== null; x = x.nextSibling)
+		text += x.nodeType === x.TEXT_NODE ? x.data : x.nodeType === x.ELEMENT_NODE ? tocGetText(x) : "";
+	return text;
+}
+
+function tocMake() {
+	"use strict";
+	var menu = document.createElement("ol");
+	var children = document.body.childNodes;
+	var chapter;
+	var chapterId;
+	var submenu;
+	for (var i = 0; i < children.length; i++) {
+		if (children[i].nodeType == 1) {
+			switch(children[i].nodeName)
+			{
+			case "H1":
+				var content = tocGetText(children[i]);
+				chapterId = encodeURIComponent(content.toLowerCase()).replace(/%20/g,'.');
+				children[i].setAttribute("id", chapterId);
+				var link = document.createElement("a");
+				link.setAttribute("href", "#" + chapterId);
+				var language = children[i].getAttribute("lang")
+				if (language !== null && language !== undefined)
+					link.setAttribute("lang", language);
+				link.innerHTML = children[i].innerHTML;
+				chapter = document.createElement("li");
+				chapter.appendChild(link);
+				menu.appendChild(chapter);
+				submenu = null;
+				break;
+			case "H2":
+				var content = tocGetText(children[i]);
+				var id = chapterId + "_" + encodeURIComponent(content.toLowerCase()).replace(/%20/g,'.');
+				children[i].setAttribute("id", id);
+				var link = document.createElement("a");
+				link.setAttribute("href", "#" + id);
+				var language = children[i].getAttribute("lang")
+				if (language !== null && language !== undefined)
+					link.setAttribute("lang", language);
+				link.innerHTML = children[i].innerHTML;
+				var section = document.createElement("li");
+				section.appendChild(link);
+				if (submenu === null) {
+				  submenu = document.createElement("ol");
+				  chapter.appendChild(submenu);
+				}
+				submenu.appendChild(section);
+				break;
+			}
+		}
+	}
+	var nav = document.createElement("nav");
+	var title = document.createElement("h1");
+	title.appendChild(document.createTextNode(""));
+	nav.appendChild(title);
+	nav.appendChild(menu);
+	var header = document.getElementsByTagName("header")[0];
+	if (document.getElementById("abstract") != null) {
+		header.parentNode.insertBefore(nav, document.getElementById("abstract").nextSibling);
+	} else {
+		header.parentNode.insertBefore(nav, header.nextSibling);
+	}
+}
+window.onload = tocMake;
+</script>
+	</head>
+	<body>
+		<header><h1></h1></header>
+		<p>
+	First paragraph
+</p><p>
+	Second paragraph
+</p>
+	</body>
+</html>
+"
+`;
+
+exports[`renderer > render(() => new __vite_ssr_import_2__.dom.Document([new __vite_ssr_import_2__.dom.Block.Math("x^2 + y^2 = z^2", [new __vite_ssr_import_2__.dom.Inline.Text("Pythagorean theorem")])])) 1`] = `
+"<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+		<meta name="author" content="" />
+		<meta name="date" content="12/02/2025" />
+		<meta name='identification' content=""/>
+		<meta name='classification' content=""/>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css" />
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+		<link rel="stylesheet" type="text/css" href="undefined/article.css" />
+		<script>
+function tocGetText(e) {
+	"use strict";
+	var text = "", x;
+	for (x = e.firstChild; x !== null; x = x.nextSibling)
+		text += x.nodeType === x.TEXT_NODE ? x.data : x.nodeType === x.ELEMENT_NODE ? tocGetText(x) : "";
+	return text;
+}
+
+function tocMake() {
+	"use strict";
+	var menu = document.createElement("ol");
+	var children = document.body.childNodes;
+	var chapter;
+	var chapterId;
+	var submenu;
+	for (var i = 0; i < children.length; i++) {
+		if (children[i].nodeType == 1) {
+			switch(children[i].nodeName)
+			{
+			case "H1":
+				var content = tocGetText(children[i]);
+				chapterId = encodeURIComponent(content.toLowerCase()).replace(/%20/g,'.');
+				children[i].setAttribute("id", chapterId);
+				var link = document.createElement("a");
+				link.setAttribute("href", "#" + chapterId);
+				var language = children[i].getAttribute("lang")
+				if (language !== null && language !== undefined)
+					link.setAttribute("lang", language);
+				link.innerHTML = children[i].innerHTML;
+				chapter = document.createElement("li");
+				chapter.appendChild(link);
+				menu.appendChild(chapter);
+				submenu = null;
+				break;
+			case "H2":
+				var content = tocGetText(children[i]);
+				var id = chapterId + "_" + encodeURIComponent(content.toLowerCase()).replace(/%20/g,'.');
+				children[i].setAttribute("id", id);
+				var link = document.createElement("a");
+				link.setAttribute("href", "#" + id);
+				var language = children[i].getAttribute("lang")
+				if (language !== null && language !== undefined)
+					link.setAttribute("lang", language);
+				link.innerHTML = children[i].innerHTML;
+				var section = document.createElement("li");
+				section.appendChild(link);
+				if (submenu === null) {
+				  submenu = document.createElement("ol");
+				  chapter.appendChild(submenu);
+				}
+				submenu.appendChild(section);
+				break;
+			}
+		}
+	}
+	var nav = document.createElement("nav");
+	var title = document.createElement("h1");
+	title.appendChild(document.createTextNode(""));
+	nav.appendChild(title);
+	nav.appendChild(menu);
+	var header = document.getElementsByTagName("header")[0];
+	if (document.getElementById("abstract") != null) {
+		header.parentNode.insertBefore(nav, document.getElementById("abstract").nextSibling);
+	} else {
+		header.parentNode.insertBefore(nav, header.nextSibling);
+	}
+}
+window.onload = tocMake;
+</script>
+	</head>
+	<body>
+		<header><h1></h1></header>
+		<figure>$$x^2 + y^2 = z^2$$<figcaption>Pythagorean theorem</figcaption></figure>
+	</body>
+</html>
+"
+`;
+
+exports[`renderer > render(() => new __vite_ssr_import_2__.dom.Document([new __vite_ssr_import_2__.dom.Block.Paragraph([new __vite_ssr_import_2__.dom.Inline.Text("Hello, world!")])])) 1`] = `
+"<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+		<meta name="author" content="" />
+		<meta name="date" content="12/02/2025" />
+		<meta name='identification' content=""/>
+		<meta name='classification' content=""/>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css" />
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+		<link rel="stylesheet" type="text/css" href="undefined/article.css" />
+		<script>
+function tocGetText(e) {
+	"use strict";
+	var text = "", x;
+	for (x = e.firstChild; x !== null; x = x.nextSibling)
+		text += x.nodeType === x.TEXT_NODE ? x.data : x.nodeType === x.ELEMENT_NODE ? tocGetText(x) : "";
+	return text;
+}
+
+function tocMake() {
+	"use strict";
+	var menu = document.createElement("ol");
+	var children = document.body.childNodes;
+	var chapter;
+	var chapterId;
+	var submenu;
+	for (var i = 0; i < children.length; i++) {
+		if (children[i].nodeType == 1) {
+			switch(children[i].nodeName)
+			{
+			case "H1":
+				var content = tocGetText(children[i]);
+				chapterId = encodeURIComponent(content.toLowerCase()).replace(/%20/g,'.');
+				children[i].setAttribute("id", chapterId);
+				var link = document.createElement("a");
+				link.setAttribute("href", "#" + chapterId);
+				var language = children[i].getAttribute("lang")
+				if (language !== null && language !== undefined)
+					link.setAttribute("lang", language);
+				link.innerHTML = children[i].innerHTML;
+				chapter = document.createElement("li");
+				chapter.appendChild(link);
+				menu.appendChild(chapter);
+				submenu = null;
+				break;
+			case "H2":
+				var content = tocGetText(children[i]);
+				var id = chapterId + "_" + encodeURIComponent(content.toLowerCase()).replace(/%20/g,'.');
+				children[i].setAttribute("id", id);
+				var link = document.createElement("a");
+				link.setAttribute("href", "#" + id);
+				var language = children[i].getAttribute("lang")
+				if (language !== null && language !== undefined)
+					link.setAttribute("lang", language);
+				link.innerHTML = children[i].innerHTML;
+				var section = document.createElement("li");
+				section.appendChild(link);
+				if (submenu === null) {
+				  submenu = document.createElement("ol");
+				  chapter.appendChild(submenu);
+				}
+				submenu.appendChild(section);
+				break;
+			}
+		}
+	}
+	var nav = document.createElement("nav");
+	var title = document.createElement("h1");
+	title.appendChild(document.createTextNode(""));
+	nav.appendChild(title);
+	nav.appendChild(menu);
+	var header = document.getElementsByTagName("header")[0];
+	if (document.getElementById("abstract") != null) {
+		header.parentNode.insertBefore(nav, document.getElementById("abstract").nextSibling);
+	} else {
+		header.parentNode.insertBefore(nav, header.nextSibling);
+	}
+}
+window.onload = tocMake;
+</script>
+	</head>
+	<body>
+		<header><h1></h1></header>
+		<p>
+	Hello, world!
+</p>
+	</body>
+</html>
+"
+`;
+
+exports[`renderer > render(() => new __vite_ssr_import_2__.dom.Document([new __vite_ssr_import_2__.dom.Block.Paragraph([new __vite_ssr_import_2__.dom.Inline.Text("Test content")])])) 1`] = `
+"<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+		<meta name="author" content="" />
+		<meta name="date" content="12/02/2025" />
+		<meta name='identification' content=""/>
+		<meta name='classification' content=""/>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css" />
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+		<link rel="stylesheet" type="text/css" href="undefined/article.css" />
+		<script>
+function tocGetText(e) {
+	"use strict";
+	var text = "", x;
+	for (x = e.firstChild; x !== null; x = x.nextSibling)
+		text += x.nodeType === x.TEXT_NODE ? x.data : x.nodeType === x.ELEMENT_NODE ? tocGetText(x) : "";
+	return text;
+}
+
+function tocMake() {
+	"use strict";
+	var menu = document.createElement("ol");
+	var children = document.body.childNodes;
+	var chapter;
+	var chapterId;
+	var submenu;
+	for (var i = 0; i < children.length; i++) {
+		if (children[i].nodeType == 1) {
+			switch(children[i].nodeName)
+			{
+			case "H1":
+				var content = tocGetText(children[i]);
+				chapterId = encodeURIComponent(content.toLowerCase()).replace(/%20/g,'.');
+				children[i].setAttribute("id", chapterId);
+				var link = document.createElement("a");
+				link.setAttribute("href", "#" + chapterId);
+				var language = children[i].getAttribute("lang")
+				if (language !== null && language !== undefined)
+					link.setAttribute("lang", language);
+				link.innerHTML = children[i].innerHTML;
+				chapter = document.createElement("li");
+				chapter.appendChild(link);
+				menu.appendChild(chapter);
+				submenu = null;
+				break;
+			case "H2":
+				var content = tocGetText(children[i]);
+				var id = chapterId + "_" + encodeURIComponent(content.toLowerCase()).replace(/%20/g,'.');
+				children[i].setAttribute("id", id);
+				var link = document.createElement("a");
+				link.setAttribute("href", "#" + id);
+				var language = children[i].getAttribute("lang")
+				if (language !== null && language !== undefined)
+					link.setAttribute("lang", language);
+				link.innerHTML = children[i].innerHTML;
+				var section = document.createElement("li");
+				section.appendChild(link);
+				if (submenu === null) {
+				  submenu = document.createElement("ol");
+				  chapter.appendChild(submenu);
+				}
+				submenu.appendChild(section);
+				break;
+			}
+		}
+	}
+	var nav = document.createElement("nav");
+	var title = document.createElement("h1");
+	title.appendChild(document.createTextNode(""));
+	nav.appendChild(title);
+	nav.appendChild(menu);
+	var header = document.getElementsByTagName("header")[0];
+	if (document.getElementById("abstract") != null) {
+		header.parentNode.insertBefore(nav, document.getElementById("abstract").nextSibling);
+	} else {
+		header.parentNode.insertBefore(nav, header.nextSibling);
+	}
+}
+window.onload = tocMake;
+</script>
+	</head>
+	<body>
+		<header><h1></h1></header>
+		<p>
+	Test content
+</p>
+	</body>
+</html>
+"
+`;
