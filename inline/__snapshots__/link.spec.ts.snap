@@ -1,3 +1,5 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Inline.Link render 1`] = `"<a href='http://example.com'>link</a>"`;
+exports[`renderer.Inline.Link > render 1`] = `"<a href='http://example.com'>link</a>"`;
+
+exports[`renderer.Inline.Link render 1`] = `"<a href='http://example.com'>link</a>"`;

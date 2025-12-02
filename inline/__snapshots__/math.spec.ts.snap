@@ -1,3 +1,5 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Inline.Math render 1`] = `"$a^2 + b^2 = c^2$"`;
+exports[`renderer.Inline.Math > render 1`] = `"$a^2 + b^2 = c^2$"`;
+
+exports[`renderer.Inline.Math render 1`] = `"$a^2 + b^2 = c^2$"`;

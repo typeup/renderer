@@ -1,4 +1,4 @@
-import * as dom from "@typeup/dom"
+import { dom } from "@typeup/dom"
 import { Renderer } from "./Renderer"
 export function render(document: dom.Document): Promise<string> {
 	const renderer = Renderer.create()

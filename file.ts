@@ -1,6 +1,6 @@
-import * as dom from "@typeup/dom"
-import { Renderer, addRenderer } from "./Renderer"
+import { dom } from "@typeup/dom"
+import { register, Renderer } from "./Renderer"
 function render(renderer: Renderer, file: dom.File): Promise<string> {
 	return renderer.render(file.content)
 }
-addRenderer("File", render)
+register("file", render)

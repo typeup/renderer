@@ -1,7 +1,7 @@
-import * as dom from "@typeup/dom"
-import { Renderer, addRenderer } from "../Renderer"
+import { dom } from "@typeup/dom"
+import { register, Renderer } from "../Renderer"
 
-async function render(renderer: Renderer, me: dom.block.DefinitionData): Promise<string> {
-	return `<dd>${ (await renderer.render(me.content)).trim() }</dd>`
+async function render(renderer: Renderer, me: dom.Block.List.Definition.Data): Promise<string> {
+	return `<dd>${(await renderer.render(me.content)).trim()}</dd>`
 }
-addRenderer("Block.DefinitionData", render)
+register("block.list.definition.data", render)

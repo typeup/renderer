@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Block.DefinitionList render 1`] = `
+exports[`renderer.Block.DefinitionList > render 1`] = `
 "<dl>
 	<dt>Alpha</dt>
 	<dd>Term A</dd>

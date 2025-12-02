@@ -1,7 +1,26 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Block.Table render 1`] = `
-"<table class=\\"\\">
+exports[`renderer.Block.Table > render 1`] = `
+"<table class="">
+	<tr>
+	<th>
+	Header A
+</th><th>
+	Header B
+</th>
+</tr><tr>
+	<td>
+	value A
+</td><td>
+	value B
+</td>
+</tr>
+	<caption>Table caption.</caption>
+</table>"
+`;
+
+exports[`renderer.Block.Table render 1`] = `
+"<table class="">
 	<tr>
 	<th>
 	Header A

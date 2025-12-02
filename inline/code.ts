@@ -1,7 +1,7 @@
-import * as dom from "@typeup/dom"
-import { Renderer, addRenderer } from "../Renderer"
+import { dom } from "@typeup/dom"
+import { register, Renderer } from "../Renderer"
 
-async function render(renderer: Renderer, me: dom.inline.Code): Promise<string> {
-	return `<code>${me.value.replace(/\&/gi, "&amp;").replace(/</gi, "&lt;").replace(/>/gi, "&gt;")}</code>`
+async function render(renderer: Renderer, me: dom.Inline.Code): Promise<string> {
+	return `<code>${me.value.replace(/&/gi, "&amp;").replace(/</gi, "&lt;").replace(/>/gi, "&gt;")}</code>`
 }
-addRenderer("Inline.Code", render)
+register("inline.code", render)

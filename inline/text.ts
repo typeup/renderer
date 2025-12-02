@@ -1,7 +1,7 @@
-import * as dom from "@typeup/dom"
-import { Renderer, addRenderer } from "../Renderer"
+import { dom } from "@typeup/dom"
+import { register, Renderer } from "../Renderer"
 
-async function render(_: Renderer, me: dom.inline.Text): Promise<string> {
+async function render(_: Renderer, me: dom.Inline.Text): Promise<string> {
 	return me.value
 }
-addRenderer("Inline.Text", render)
+register("inline.text", render)

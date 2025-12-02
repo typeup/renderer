@@ -1,9 +1,9 @@
-import * as dom from "@typeup/dom"
-import { Renderer, addRenderer } from "../Renderer"
+import { dom } from "@typeup/dom"
+import { register, Renderer } from "../Renderer"
 
-async function render(renderer: Renderer, me: dom.block.TableRow): Promise<string> {
+async function render(renderer: Renderer, me: dom.Block.Table.Row): Promise<string> {
 	return `<tr>
-	${ (await Promise.all(me.content.map(async row => renderer.render(row)))).join("") }
+	${(await Promise.all(me.content.map(async row => renderer.render(row)))).join("")}
 </tr>`
 }
-addRenderer("Block.TableRow", render)
+register("block.table.row", render)

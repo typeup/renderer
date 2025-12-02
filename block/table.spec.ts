@@ -1,25 +1,30 @@
-import * as dom from "@typeup/dom"
-import { Renderer } from "../Renderer"
 import "../inline"
 import "./tableCell"
 import "./tableRow"
 import "./table"
+import { dom } from "@typeup/dom"
+import { Renderer } from "../Renderer"
 
 const renderer = Renderer.create()
-describe("Block.Table", () => {
+describe("renderer.Block.Table", () => {
 	it("render", async () => {
-		expect(await renderer.render(new dom.block.Table(["", ""], [
-			new dom.block.TableRow([
-				new dom.block.TableCell(true, [new dom.inline.Text("Header A")]),
-				new dom.block.TableCell(true, [new dom.inline.Text("Header B")]),
-			]),
-			new dom.block.TableRow([
-				new dom.block.TableCell(false, [new dom.inline.Text("value A")]),
-				new dom.block.TableCell(false, [new dom.inline.Text("value B")]),
-			]),
-		], 
-		[
-			new dom.inline.Text("Table caption.")
-		]))).toMatchSnapshot()
+		expect(
+			await renderer.render(
+				new dom.Block.Table(
+					["", ""],
+					[
+						new dom.Block.Table.Row([
+							new dom.Block.Table.Cell(true, [new dom.Inline.Text("Header A")]),
+							new dom.Block.Table.Cell(true, [new dom.Inline.Text("Header B")]),
+						]),
+						new dom.Block.Table.Row([
+							new dom.Block.Table.Cell(false, [new dom.Inline.Text("value A")]),
+							new dom.Block.Table.Cell(false, [new dom.Inline.Text("value B")]),
+						]),
+					],
+					[new dom.Inline.Text("Table caption.")]
+				)
+			)
+		).toMatchSnapshot()
 	})
 })

@@ -1,33 +1,25 @@
-import * as dom from "@typeup/dom"
-import { Renderer } from "../Renderer"
 import "../index"
-
-jest.useFakeTimers()
+import { dom } from "@typeup/dom"
+import { Renderer } from "../Renderer"
 
 const renderer = Renderer.create()
-describe("Block.DefinitionList", () => {
+describe("renderer.Block.DefinitionList", () => {
 	it("render", async () => {
-		const node = new dom.block.DefinitionList([
-			new dom.block.DefinitionTerm([
-				new dom.inline.Text("Alpha"),
-			], [
-				new dom.block.DefinitionData([
-					new dom.inline.Text("Term A"),
-				]),
-				new dom.block.DefinitionData([
-					new dom.inline.Text("First Term"),
-				]),
-			]),
-			new dom.block.DefinitionTerm([
-				new dom.inline.Text("Beta"),
-			], [
-				new dom.block.DefinitionData([
-					new dom.inline.Text("Term B"),
-				]),
-				new dom.block.DefinitionData([
-					new dom.inline.Text("Second Term"),
-				]),
-			]),
+		const node = new dom.Block.List.Definition([
+			new dom.Block.List.Definition.Term(
+				[new dom.Inline.Text("Alpha")],
+				[
+					new dom.Block.List.Definition.Data([new dom.Inline.Text("Term A")]),
+					new dom.Block.List.Definition.Data([new dom.Inline.Text("First Term")]),
+				]
+			),
+			new dom.Block.List.Definition.Term(
+				[new dom.Inline.Text("Beta")],
+				[
+					new dom.Block.List.Definition.Data([new dom.Inline.Text("Term B")]),
+					new dom.Block.List.Definition.Data([new dom.Inline.Text("Second Term")]),
+				]
+			),
 		])
 		expect(await renderer.render(node)).toMatchSnapshot()
 	})

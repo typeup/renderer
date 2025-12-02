@@ -1,31 +1,35 @@
-import * as dom from "@typeup/dom"
-import { Renderer, addRenderer } from "./Renderer"
+import { dom } from "@typeup/dom"
+import { register, Renderer } from "./Renderer"
 async function render(renderer: Renderer, document: dom.Document): Promise<string> {
 	const content = await renderer.render(document.content)
-	return (
-`<!doctype html>
-<html lang="${ renderer.getVariable("language") || "en" }">
+	return `<!doctype html>
+<html lang="${renderer.get("language") || "en"}">
 	<head>
 		<meta charset="UTF-8" />
-		<title>${ renderer.getVariable("title") || ""  }</title>
-		<meta name="author" content="${ renderer.getVariable("author") || ""  }" />
-		<meta name="date" content="${ renderer.getVariable("date") || new Date().toLocaleString(renderer.getVariable("language") || "en", { year: "numeric", month: "2-digit", day: "2-digit" }) }" />
-		<meta name='identification' content="${ renderer.getVariable("identification") || "" }"/>
-		<meta name='classification' content="${ renderer.getVariable("classification") || "" }"/>
+		<title>${renderer.get("title") || ""}</title>
+		<meta name="author" content="${renderer.get("author") || ""}" />
+		<meta name="date" content="${
+			renderer.get("date") ||
+			new Date().toLocaleString(renderer.get("language") || "en", { year: "numeric", month: "2-digit", day: "2-digit" })
+		}" />
+		<meta name='identification' content="${renderer.get("identification") || ""}"/>
+		<meta name='classification' content="${renderer.get("classification") || ""}"/>
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css" />
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
 		<script>hljs.initHighlightingOnLoad();</script>
-		<link rel="stylesheet" type="text/css" href="${ renderer.getVariable("template") + "/" + (renderer.getVariable("class") || "article") + ".css" }" />
-		<script>${ toc }</script>
+		<link rel="stylesheet" type="text/css" href="${
+			renderer.get("template") + "/" + (renderer.get("class") || "article") + ".css"
+		}" />
+		<script>${toc}</script>
 	</head>
 	<body>
-		<header><h1>${ renderer.getVariable("title") || ""  }</h1></header>
-		${ content }
+		<header><h1>${renderer.get("title") || ""}</h1></header>
+		${content}
 	</body>
 </html>
-`)
+`
 }
-addRenderer("Document", render)
+register("document", render)
 
 const toc = `
 function tocGetText(e) {

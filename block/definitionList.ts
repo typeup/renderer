@@ -1,9 +1,9 @@
-import * as dom from "@typeup/dom"
-import { Renderer, addRenderer } from "../Renderer"
+import { dom } from "@typeup/dom"
+import { register, Renderer } from "../Renderer"
 
-async function render(renderer: Renderer, me: dom.block.DefinitionList): Promise<string> {
+async function render(renderer: Renderer, me: dom.Block.List.Definition): Promise<string> {
 	return `<dl>
-	${ (await Promise.all(me.content.map(async term => renderer.render(term)))).join("\n\t") }
+	${(await Promise.all(me.content.map(async term => renderer.render(term)))).join("\n\t")}
 </dl>`
 }
-addRenderer("Block.DefinitionList", render)
+register("block.list.definition", render)

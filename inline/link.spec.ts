@@ -1,11 +1,13 @@
-import * as dom from "@typeup/dom"
-import { Renderer } from "../Renderer"
 import "./link"
 import "./text"
+import { dom } from "@typeup/dom"
+import { Renderer } from "../Renderer"
 
 const renderer = Renderer.create()
-describe("Inline.Link", () => {
+describe("renderer.Inline.Link", () => {
 	it("render", async () => {
-		expect(await renderer.render(new dom.inline.Link("http://example.com", [new dom.inline.Text("link")]))).toMatchSnapshot()
+		expect(
+			await renderer.render(new dom.Inline.Link("http://example.com", [new dom.Inline.Text("link")]))
+		).toMatchSnapshot()
 	})
 })

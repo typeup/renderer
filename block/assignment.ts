@@ -1,8 +1,8 @@
-import * as dom from "@typeup/dom"
-import { Renderer, addRenderer } from "../Renderer"
+import { dom } from "@typeup/dom"
+import { register, Renderer } from "../Renderer"
 
-async function render(renderer: Renderer, me: dom.block.Assignment): Promise<string> {
-	renderer.setVariable(me.name, me.value)
+async function render(renderer: Renderer, me: dom.Block.Assignment): Promise<string> {
+	renderer.set(me.name, me.value)
 	return ""
 }
-addRenderer("Block.Assignment", render)
+register("block.assignment", render)

@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Block.Code html 1`] = `
+exports[`renderer.Block.Code > html 1`] = `
 "<figure>
-	<pre><code class=\\"html\\">&lt;html&gt;
+	<pre><code class="html">&lt;html&gt;
 	&lt;head&gt;
 	&lt;title&gt;Title&lt;/title&gt;
 	&lt;/head&gt;
@@ -14,10 +14,10 @@ exports[`Block.Code html 1`] = `
 "
 `;
 
-exports[`Block.Code render 1`] = `
+exports[`renderer.Block.Code > render 1`] = `
 "<figure>
-	<pre><code class=\\"c\\">void main() {
-	printf(\\"Hello World!\\")
+	<pre><code class="c">void main() {
+	printf("Hello World!")
 }</code></pre>
 	<figcaption>Hello World in C.</figcaption>
 </figure>

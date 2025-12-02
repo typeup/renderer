@@ -1,9 +1,9 @@
-import * as dom from "@typeup/dom"
-import { Renderer, addRenderer } from "../Renderer"
+import { dom } from "@typeup/dom"
+import { register, Renderer } from "../Renderer"
 
-async function render(renderer: Renderer, me: dom.block.Paragraph): Promise<string> {
+async function render(renderer: Renderer, me: dom.Block.Paragraph): Promise<string> {
 	return `<p>
-	${ await renderer.render(me.content) }
+	${await renderer.render(me.content)}
 </p>`
 }
-addRenderer("Block.Paragraph", render)
+register("block.paragraph", render)
