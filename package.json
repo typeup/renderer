@@ -35,46 +35,46 @@
   "github": {
     "release": true
   },
-  "scripts": {
-    "lint": "eslint --max-warnings=0 '**/*.{ts,tsx}'",
-    "lint:fix": "eslint '**/*.{ts,tsx}' --fix",
-    "type-check": "tsc --noEmit",
-    "type-check:cjs": "tsc -p tsconfig.cjs.json --noEmit",
-    "type-check:mjs": "tsc -p tsconfig.mjs.json --noEmit",
-    "build": "rimraf dist/* && npm run build:cjs && npm run build:mjs",
-    "build:cjs": "tsc -p tsconfig.cjs.json",
-    "build:mjs": "tsc -p tsconfig.mjs.json",
-    "test": "vitest --run",
-    "test:watch": "vitest",
-    "test:ui": "vitest --ui",
-    "coverage": "vitest --coverage",
-    "coverage:open": "vitest --coverage && open coverage/index.html",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run verify",
-    "clean": "rimraf dist node_modules coverage .nyc_output",
-    "verify": "npm run type-check && npm run build && npm run test && npm run lint",
-    "release": "npm run verify && npm version patch && git push --follow-tags",
-    "release:minor": "npm run verify && npm version minor && git push --follow-tags",
-    "release:major": "npm run verify && npm version major && git push --follow-tags"
-  },
-  "devDependencies": {
-    "@types/node": "^24.10.1",
-    "@typescript-eslint/eslint-plugin": "8.47.0",
-    "@typescript-eslint/parser": "8.47.0",
-    "@vitest/coverage-v8": "^4.0.13",
-    "eslint": "^8.56.0",
-    "eslint-plugin-prettierx": "github:utily/eslint-plugin-prettierx#utily-20231004",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
-    "prettierx": "github:utily/prettierx#utily-20231004",
-    "rimraf": "^6.1.2",
-    "typescript": "5.9.3",
-    "vite": "^7.2.4",
-    "vitest": "^4.0.13"
-  },
-  "dependencies": {
-    "@mathjax/src": "^4.0.0",
-    "@typeup/dom": "^1.0.4",
-    "mendly": "^2.1.0",
-    "yuml2svg": "^5.0.1"
-  }
+	"scripts": {
+		"lint": "eslint --max-warnings=0 '**/*.{ts,tsx}'",
+		"lint:fix": "eslint '**/*.{ts,tsx}' --fix",
+		"type-check": "tsc --noEmit",
+		"type-check:cjs": "tsc -p tsconfig.cjs.json --noEmit",
+		"type-check:mjs": "tsc -p tsconfig.mjs.json --noEmit",
+		"build": "rimraf dist/* && npm run build:cjs && npm run build:mjs",
+		"build:cjs": "tsc -p tsconfig.cjs.json",
+		"build:mjs": "tsc -p tsconfig.mjs.json",
+		"test": "vitest --run",
+		"test:watch": "vitest",
+		"test:ui": "vitest --ui",
+		"coverage": "vitest --coverage",
+		"coverage:open": "vitest --coverage && open coverage/index.html",
+		"prepare": "npm run build",
+		"prepublishOnly": "npm run verify",
+		"clean": "rimraf dist node_modules coverage .nyc_output",
+		"verify": "npm run type-check && npm run build && npm run test && npm run lint && npm audit --omit=dev --audit-level moderate",
+		"release": "npm run verify && npm version patch && git push --follow-tags",
+		"release:minor": "npm run verify && npm version minor && git push --follow-tags",
+		"release:major": "npm run verify && npm version major && git push --follow-tags"
+	},
+	"devDependencies": {
+		"@types/node": "^24.10.1",
+		"@typescript-eslint/eslint-plugin": "8.47.0",
+		"@typescript-eslint/parser": "8.47.0",
+		"@vitest/coverage-v8": "^4.0.13",
+		"eslint": "^8.56.0",
+		"eslint-plugin-prettierx": "github:utily/eslint-plugin-prettierx#utily-20231004",
+		"eslint-plugin-simple-import-sort": "^12.1.1",
+		"prettierx": "github:utily/prettierx#utily-20231004",
+		"rimraf": "^6.1.2",
+		"typescript": "5.9.3",
+		"vite": "^7.2.4",
+		"vitest": "^4.0.13"
+	},
+	"dependencies": {
+		"@mathjax/src": "^4.0.0",
+		"@typeup/dom": "^1.0.4",
+		"mendly": "^2.1.0",
+		"yuml2svg": "^5.0.1"
+	}
 }
