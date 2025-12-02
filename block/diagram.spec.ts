@@ -1,4 +1,5 @@
 import "./diagram"
+import "../inline/text"
 import { dom } from "@typeup/dom"
 import { Renderer } from "../Renderer"
 
