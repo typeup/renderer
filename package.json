@@ -73,7 +73,6 @@
 	},
 	"dependencies": {
 		"@typeup/dom": "^1.0.4",
-		"mathjax": "^4.0.0",
 		"mendly": "^2.1.0",
 		"yuml2svg": "^5.0.1"
 	}

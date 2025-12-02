@@ -1,5 +1,4 @@
 import { dom } from "@typeup/dom"
-import { math } from "./math"
 export type RenderFunction<N extends dom.Node = dom.Node> = (renderer: Renderer, node: N) => Promise<string>
 
 export class Renderer {
@@ -19,8 +18,6 @@ export class Renderer {
 		else {
 			const render = renderers[node.class]
 			result = render ? await render(this, node) : ""
-			if (node.class == "Document")
-				result = await math.typeset(result)
 		}
 		return result
 	}
