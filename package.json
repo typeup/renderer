@@ -1,6 +1,6 @@
 {
 	"name": "@typeup/renderer",
-	"version": "1.1.4",
+	"version": "1.1.5",
 	"description": "Renderer for TypeUp.",
 	"author": "Simon Mika <simon@mika.se>",
 	"license": "MIT",
