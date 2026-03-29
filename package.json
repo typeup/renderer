@@ -72,8 +72,8 @@
 		"vitest": "^4.0.13"
 	},
 	"dependencies": {
-		"@typeup/dom": "^1.0.4",
-		"mendly": "^2.1.0",
+		"@typeup/dom": "^1.0.5",
+		"mendly": "^2.3.0",
 		"yuml2svg": "^5.0.1"
 	}
 }
