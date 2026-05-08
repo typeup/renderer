@@ -1,5 +1,5 @@
 import { dom } from "@typeup/dom"
-import { register, Renderer } from "../Renderer"
+import { Renderer, register } from "../Renderer"
 
 async function render(renderer: Renderer, me: dom.Block.List.Unordered): Promise<string> {
 	return `<ul>

@@ -9,8 +9,12 @@ async function render(renderer: Renderer, document: dom.Document): Promise<strin
 		<title>${renderer.get("title") || ""}</title>
 		<meta name="author" content="${renderer.get("author") || ""}" />
 		<meta name="date" content="${
-			renderer.get("date") ||
-			new Date().toLocaleString(renderer.get("language") || "en", { year: "numeric", month: "2-digit", day: "2-digit" })
+			renderer.get("date")
+			|| new Date().toLocaleString(renderer.get("language") || "en", {
+				year: "numeric",
+				month: "2-digit",
+				day: "2-digit"
+			})
 		}" />
 		<meta name='identification' content="${renderer.get("identification") || ""}"/>
 		<meta name='classification' content="${renderer.get("classification") || ""}"/>

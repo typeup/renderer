@@ -6,7 +6,7 @@ const renderer = Renderer.create()
 describe("renderer.Block.Code", () => {
 	it("render", async () => {
 		const node = new dom.Block.Code("c", `void main() {\n\tprintf("Hello World!")\n}`, [
-			new dom.Inline.Text("Hello World in C."),
+			new dom.Inline.Text("Hello World in C.")
 		])
 		expect(await renderer.render(node)).toMatchSnapshot()
 	})
